@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SamplesCalculator</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div id="start">
+            <label for="starttime">开始时间</label>
+            <input type="text" name="" id="starttime" placeholder="以&quot;.&quot;分隔时分秒">
+        </div>
+        <div id="end">
+            <label for="endtime">结束时间</label>
+            <input type="text" name="" id="endtime" placeholder="以&quot;.&quot;分隔时分秒">
+        </div>
+        <div id="leak">
+            <label for="leak">多算采样</label>
+            <input type="text" name="" id="timeleak">
+        </div>
+        <div id="calc">
+            <button id="calculate" type="button" onclick="calculate()">Calculate</button>
+            <button type="button" onclick="clearInput()">Clear</button>
+        </div>
+        <div>
+            <label for="samples">采样数</label>
+            <input type="text" name="" id="samples" disabled="disabled">
+        </div>
+    </main>
+</body>
+
+</html>
