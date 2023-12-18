@@ -13,17 +13,27 @@ body {
 }
 
 main {
+    margin: 0px;  
+}
+
+h1 {
+    text-align: center;
+}
+
+#content {
     display: flex;
     flex-direction: column;
-    height: 200px;
-    width: 280px;
+    height: 280px;
+    width: 380px;
     background: transparent;
     /* backdrop-filter: blur(5px); */
     justify-content: space-evenly;
     align-items: center;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 14px;
+    background-color: #417782;
 }
+
 div {
     display: block;
 }
