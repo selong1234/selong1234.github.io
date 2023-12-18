@@ -1,46 +1,22 @@
-console.clear();
 
-const cardsContainer = document.querySelector(".cards");
-const cardsContainerInner = document.querySelector(".cards__inner");
-const cards = Array.from(document.querySelectorAll(".card"));
-const overlay = document.querySelector(".overlay");
+const buttons = document.getElementsByTagName ("button");
 
-const applyOverlayMask = (e) => {
-  const overlayEl = e.currentTarget;
-  const x = e.pageX - cardsContainer.offsetLeft;
-  const y = e.pageY - cardsContainer.offsetTop;
+for (let i = 0; i < buttons.length; i++)
+	buttons[i].addEventListener ("mousedown", () => toggle(buttons[i]));
 
-  overlayEl.style = `--opacity: 1; --x: ${x}px; --y:${y}px;`;
-};
+function toggle (_element) {
+	if (_element.classList[0] == "OFF")
+		turnON (_element);
+	else
+		turnOFF (_element);
+}
 
-const createOverlayCta = (overlayCard, ctaEl) => {
-  const overlayCta = document.createElement("div");
-  overlayCta.classList.add("cta");
-  overlayCta.textContent = ctaEl.textContent;
-  overlayCta.setAttribute("aria-hidden", true);
-  overlayCard.append(overlayCta);
-};
+function turnOFF (_element) {
+	_element.classList.remove ("ON");
+	_element.classList.add ("OFF");
+}
 
-const observer = new ResizeObserver((entries) => {
-  entries.forEach((entry) => {
-    const cardIndex = cards.indexOf(entry.target);
-    let width = entry.borderBoxSize[0].inlineSize;
-    let height = entry.borderBoxSize[0].blockSize;
-
-    if (cardIndex >= 0) {
-      overlay.children[cardIndex].style.width = `${width}px`;
-      overlay.children[cardIndex].style.height = `${height}px`;
-    }
-  });
-});
-
-const initOverlayCard = (cardEl) => {
-  const overlayCard = document.createElement("div");
-  overlayCard.classList.add("card");
-  createOverlayCta(overlayCard, cardEl.lastElementChild);
-  overlay.append(overlayCard);
-  observer.observe(cardEl);
-};
-
-cards.forEach(initOverlayCard);
-document.body.addEventListener("pointermove", applyOverlayMask);
+function turnON (_element) {
+	_element.classList.remove ("OFF");
+	_element.classList.add ("ON");
+}
