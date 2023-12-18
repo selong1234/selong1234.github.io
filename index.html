@@ -1,54 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="assets/css/style.css" rel="stylesheet">
-    <script defer src="assets/js/script.js"></script>
+    <link href="style.css" rel="stylesheet">
+    <script defer src="script.js"></script>
 </head>
+
 <body>
-    <main class="main flow">
-        <h1 class="main__heading">Pricing</h1>
-        <div class="main__cards cards">
-          <div class="cards__inner">
-            <div class="cards__card card">
-              <h2 class="card__heading">Basic</h2>
-              <p class="card__price">$9.99</p>
-              <ul role="list" class="card__bullets flow">
-                <li>Access to standard workouts and nutrition plans</li>
-                <li>Email support</li>
-              </ul>
-              <a href="#basic" class="card__cta cta">Get Started</a>
-            </div>
-      
-            <div class="cards__card card">
-              <h2 class="card__heading">Pro</h2>
-              <p class="card__price">$19.99</p>
-              <ul role="list" class="card__bullets flow">
-                <li>Access to advanced workouts and nutrition plans</li>
-                <li>Priority Email support</li>
-                <li>Exclusive access to live Q&A sessions</li>
-              </ul>
-              <a href="#pro" class="card__cta cta">Upgrade to Pro</a>
-            </div>
-      
-            <div class="cards__card card">
-              <h2 class="card__heading">Ultimate</h2>
-              <p class="card__price">$29.99</p>
-              <ul role="list" class="card__bullets flow">
-                <li>Access to all premium workouts and nutrition plans</li>
-                <li>24/7 Priority support</li>
-                <li>1-on-1 virtual coaching session every month</li>
-                <li>Exclusive content and early access to new features</li>
-              </ul>
-              <a href="#ultimate" class="card__cta cta">Go Ultimate</a>
-            </div>
-          </div>
-      
-          <div class="overlay cards__inner"></div>
+
+    <div class="Background">
+        <div class="Panel">
+            <button class="ON">
+                <svg viewBox="0 0 22 23" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 11L4 21" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M19 13L19 21" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M19 3L19 7" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M11.5 3L11.5 13" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M4 3L4 5" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M11.5 19L11.5 21" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M2 9.5C2 9.03406 2 8.80109 2.07612 8.61732C2.17761 8.37229 2.37229 8.17761 2.61732 8.07612C2.80109 8 3.03406 8 3.5 8H4.5C4.96594 8 5.19891 8 5.38268 8.07612C5.62771 8.17761 5.82239 8.37229 5.92388 8.61732C6 8.80109 6 9.03406 6 9.5C6 9.96594 6 10.1989 5.92388 10.3827C5.82239 10.6277 5.62771 10.8224 5.38268 10.9239C5.19891 11 4.96594 11 4.5 11H3.5C3.03406 11 2.80109 11 2.61732 10.9239C2.37229 10.8224 2.17761 10.6277 2.07612 10.3827C2 10.1989 2 9.96594 2 9.5Z"
+                        stroke="#141B34" fill="#141B34" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M17 11.5C17 11.0341 17 10.8011 17.0761 10.6173C17.1776 10.3723 17.3723 10.1776 17.6173 10.0761C17.8011 10 18.0341 10 18.5 10H19.5C19.9659 10 20.1989 10 20.3827 10.0761C20.6277 10.1776 20.8224 10.3723 20.9239 10.6173C21 10.8011 21 11.0341 21 11.5C21 11.9659 21 12.1989 20.9239 12.3827C20.8224 12.6277 20.6277 12.8224 20.3827 12.9239C20.1989 13 19.9659 13 19.5 13H18.5C18.0341 13 17.8011 13 17.6173 12.9239C17.3723 12.8224 17.1776 12.6277 17.0761 12.3827C17 12.1989 17 11.9659 17 11.5Z"
+                        stroke="#141B34" fill="#141B34" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M9.5 14.5C9.5 14.0341 9.5 13.8011 9.57612 13.6173C9.67761 13.3723 9.87229 13.1776 10.1173 13.0761C10.3011 13 10.5341 13 11 13H12C12.4659 13 12.6989 13 12.8827 13.0761C13.1277 13.1776 13.3224 13.3723 13.4239 13.6173C13.5 13.8011 13.5 14.0341 13.5 14.5C13.5 14.9659 13.5 15.1989 13.4239 15.3827C13.3224 15.6277 13.1277 15.8224 12.8827 15.9239C12.6989 16 12.4659 16 12 16H11C10.5341 16 10.3011 16 10.1173 15.9239C9.87229 15.8224 9.67761 15.6277 9.57612 15.3827C9.5 15.1989 9.5 14.9659 9.5 14.5Z"
+                        stroke="#141B34" fill="#141B34" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="OFF">
+                <svg viewBox="0 0 23 21" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M3.00086 7L2.25086 7.00016L2.25094 7.35131L2.52068 7.57613L3.00086 7ZM9 12L9.74541 11.9172L9.71208 11.6171L9.48018 11.4239L9 12ZM10 21L9.25459 21.0828C9.28167 21.3265 9.42618 21.5416 9.64159 21.6588C9.85699 21.776 10.1161 21.7805 10.3354 21.6708L10 21ZM14 19L14.3354 19.6708L14.6869 19.4951L14.7425 19.1061L14 19ZM15 12L14.5199 11.4238L14.2983 11.6085L14.2575 11.8939L15 12ZM21 7L21.4801 7.57617L21.75 7.35128V7H21ZM3 3V2.25C2.80106 2.25 2.61027 2.32904 2.46961 2.46973C2.32896 2.61041 2.24996 2.80122 2.25 3.00016L3 3ZM21 3H21.75C21.75 2.58579 21.4142 2.25 21 2.25V3ZM2.52068 7.57613L8.51982 12.5761L9.48018 11.4239L3.48104 6.42387L2.52068 7.57613ZM8.25459 12.0828L9.25459 21.0828L10.7454 20.9172L9.74541 11.9172L8.25459 12.0828ZM14.7425 19.1061L15.7425 12.1061L14.2575 11.8939L13.2575 18.8939L14.7425 19.1061ZM15.4801 12.5762L21.4801 7.57617L20.5199 6.42383L14.5199 11.4238L15.4801 12.5762ZM3 3.75H21V2.25H3V3.75ZM10.3354 21.6708L14.3354 19.6708L13.6646 18.3292L9.66459 20.3292L10.3354 21.6708ZM2.25 3.00016L2.25086 7.00016L3.75086 6.99984L3.75 2.99984L2.25 3.00016ZM20.25 3V7H21.75V3H20.25Z"
+                        fill="#141B34" />
+                </svg>
+            </button>
+            <button class="OFF">
+                <svg viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 8L6 16" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M18 16V12C18 9.17157 18 7.75736 17.1213 6.87868C16.2426 6 14.8284 6 12 6L11 6M11 6C11 5.29977 12.9943 3.99153 13.5 3.5M11 6C11 6.70023 12.9943 8.00847 13.5 8.5"
+                        stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <circle cx="6" cy="18" r="2" stroke="#141B34" stroke-width="1.5" />
+                    <circle cx="6" cy="6" r="2" stroke="#141B34" stroke-width="1.5" />
+                    <circle cx="18" cy="18" r="2" stroke="#141B34" stroke-width="1.5" />
+                </svg>
+            </button>
         </div>
-      </main>
-      
+    </div>
+
 </body>
+
 </html>
