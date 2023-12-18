@@ -11,25 +11,28 @@
 
 <body>
     <main>
-        <div id="start">
-            <label for="starttime">开始时间</label>
-            <input type="text" name="" id="starttime" placeholder="以&quot;.&quot;分隔时分秒">
-        </div>
-        <div id="end">
-            <label for="endtime">结束时间</label>
-            <input type="text" name="" id="endtime" placeholder="以&quot;.&quot;分隔时分秒">
-        </div>
-        <div id="leak">
-            <label for="leak">多算采样</label>
-            <input type="text" name="" id="timeleak">
-        </div>
-        <div id="calc">
-            <button id="calculate" type="button" onclick="calculate()">Calculate</button>
-            <button type="button" onclick="clearInput()">Clear</button>
-        </div>
-        <div>
-            <label for="samples">采样数</label>
-            <input type="text" name="" id="samples" disabled="disabled">
+        <h1>Samples Calculator</h1>
+        <div id="content">
+            <div id="start">
+                <label for="starttime">开始时间</label>
+                <input type="text" name="" id="starttime" placeholder="以&quot;.&quot;分隔时分秒">
+            </div>
+            <div id="end">
+                <label for="endtime">结束时间</label>
+                <input type="text" name="" id="endtime" placeholder="以&quot;.&quot;分隔时分秒">
+            </div>
+            <div id="leak">
+                <label for="leak">多算采样</label>
+                <input type="text" name="" id="timeleak">
+            </div>
+            <div id="calc">
+                <button id="calculate" type="button" onclick="calculate()">Calculate</button>
+                <button type="button" onclick="clearInput()">Clear</button>
+            </div>
+            <div>
+                <label for="samples">采样数</label>
+                <input type="text" name="" id="samples" disabled="disabled">
+            </div>
         </div>
     </main>
 </body>
